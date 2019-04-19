@@ -81,7 +81,7 @@
         document.querySelector('#app')
       )
       
-    ### 传参
+  ### 传参
       class Title extends React.Component {
         show() {
           console.log(this.props.a);
@@ -108,7 +108,7 @@
       2.apply(this指向谁, [arg1, arg2...])  --> 在函数调用阶段改变 this 的指向
       3.bind(this指向谁)                    --> 只是在函数定义阶段改变 this 指向，最终会返回一个函数，需要再次调用（传参）
       
-    ### 状态（相当于组件类的属性，需要放到构造函数里边）
+  ### 状态（相当于组件类的属性，需要放到构造函数里边）
       class Title extends React.Component {
         constructor() {
           // 继承父级属性
@@ -131,7 +131,7 @@
       this.state.msg="new state" 这种方式有问题，虽然状态更新了，但是视图没有跟着更新
       想要更新视图，需要使用react提供的一个方法 --> this.setState({key: val})
       
-     ### 获取元素
+   ### 获取元素
       class SyncInput extends React.Component {
         constructor() {
           super()
