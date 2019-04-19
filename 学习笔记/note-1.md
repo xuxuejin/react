@@ -103,6 +103,11 @@
       
       2.props属性只读，执行 this.props.a='good' 会报错（怎么才能修改，并且更新视图，类似ag和vue，其实在react中使用的是状态）
       
+      ☆复习：有哪些改变 this 指向的方法？
+      1.call(this指向谁, arg1, arg2...)     --> 在函数调用阶段改变 this 的指向
+      2.apply(this指向谁, [arg1, arg2...])  --> 在函数调用阶段改变 this 的指向
+      3.bind(this指向谁)                    --> 只是在函数定义阶段改变 this 指向，最终会返回一个函数，需要再次调用（传参）
+      
     ### 状态（相当于组件类的属性，需要放到构造函数里边）
       class Title extends React.Component {
         constructor() {
