@@ -1,13 +1,13 @@
 # jsx语法
 学习react需要学习jsx的写法，言而简之就是可以在js里边书写html标签，有几点需要注意的地方：
-  1.书写格式
+  ## 1.书写格式
     let div=<div>welcome react</div>
     
-  2.多个标签,必须有一个根元素（标签）包裹着所有元素（标签）
+  ## 2.多个标签,必须有一个根元素（标签）包裹着所有元素（标签）
     错误 -------> let div=<div>welcome react</div><span>span</span>      
     正确 -------> let div=<div><div>welcome react</div><span>span</span></div>
   
-  3.可以自由缩进
+  ## 3.可以自由缩进
     let div=<div>
               <div>welcome react</div>
               <span>span</span>
@@ -18,28 +18,28 @@
               <span>span</span>
             </div>)
   
-  4.单标签必须闭合
+  ## 4.单标签必须闭合
     错误 -------> <img>
     正确 -------> <img />
   
-  5.标签的class属性名要写成className
+  ## 5.标签的class属性名要写成className
     let div=<div className="content">welcome react</div>
   
-  6.jsx语法里边写js代码，用{}包裹
+  ## 6.jsx语法里边写js代码，用{}包裹
       let str='welcome react';    
       let div=<div className="content">{str}</div>
   
-  7.标签写style属性，要写成json的形式，json属于js语法，因此必须遵循第6条书写js的规则
+  ## 7.标签写style属性，要写成json的形式，json属于js语法，因此必须遵循第6条书写js的规则
     错误 -------> let img=<img style="{width: '50px', height: '50px'}" />;
     正确 -------> let img=<img style={{width: '50px', height: '50px'}}/>;
     外边的{}是在jsx语法里边写js代码的规范，里边的{}是json语法的规范
     
-  8.标签添加事件，事件名遵循驼峰命名法
+  ## 8.标签添加事件，事件名遵循驼峰命名法
   错误 -------> let div=<div onclick={fn}></div>
   正确 -------> let div=<div onClick={fn}></div>
 
 # react开发模式
-  ## 直接引入文件
+  ## 1.直接引入文件
     react.js      -------> React 的核心库
     react-dom.js  -------> 提供与 DOM 相关的功能
     babel.js      -------> 将 JSX 语法转为 JavaScript 语法
@@ -149,7 +149,7 @@
       2.获取添加 ref 属性的对象，this.refs 获取的是所有添加 ref 属性的元素（一般用来获取别的元素）
       3.原生js获取：document.querySelector
     
-  ## 基于webpack开发
+  ## 2.基于webpack开发
   
   
   
