@@ -97,9 +97,9 @@
       )
         
       ☆注意：
-      1.在添加事件的时候，需要使用 bind 修改一下 this 的指向 --> this.show.bind(this)
+      1.在添加事件的时候，（this有问题）需要使用 bind 修改一下 this 的指向 --> this.show.bind(this)
       
-      疑问：this.props 中 this 指向的组件实例，但是在调用方法的时候，this 就变成 undefined 了，需要 bind(this) 修改 this 的指向？
+      疑问：this.props 中 this 指向的组件实例，但是在调用方法的时候，this 就变成 undefined 了？
       
       2.props属性只读，执行 this.props.a='good' 会报错（怎么才能修改，并且更新视图，类似ag和vue，其实在react中使用的是状态）
       
