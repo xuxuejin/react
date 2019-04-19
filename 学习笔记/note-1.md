@@ -1,5 +1,5 @@
 # jsx语法
-学习react需要学习jsx的写法，言而简之就是可以在js里边书写html标签，有几点需要注意的地方：
+学习react需要学习jsx的写法，言而简之就是可以在js里边书写html标签，下面是语法规范：
   ## 1.单个标签书写格式
     let div=<div>welcome react</div>
     
