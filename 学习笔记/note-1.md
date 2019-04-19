@@ -32,6 +32,7 @@
   ## 7.标签写style属性，要写成json的形式，json属于js语法，因此必须遵循第6条书写js的规则
     错误 -------> let img=<img style="{width: '50px', height: '50px'}" />;
     正确 -------> let img=<img style={{width: '50px', height: '50px'}}/>;
+    
     外边的{}是在jsx语法里边写js代码的规范，里边的{}是json语法的规范
     
   ## 8.标签添加事件，事件名遵循驼峰命名法
@@ -44,9 +45,17 @@
     react-dom.js  -------> 提供与 DOM 相关的功能
     babel.js      -------> 将 JSX 语法转为 JavaScript 语法
     
-    Babel主要是用来转换各种ES*代码为浏览器可识别的ES代码。就目前来说，会转换ES6和ES7语句为ES5语句，转换JSX看起来倒像是其的一个附加功能，还有其他的JSX语句转换器，如：jsxTransformer.js --> 对应script type 为 type="text/jsx"； browser.js --> 对应script type 为 type="text/babel",babel的浏览器版本为browser.js
+    Babel主要是用来转换各种ES*代码为浏览器可识别的ES代码。就目前来说，会转换ES6和ES7语句为ES5语句，转换JSX看起来倒像是其的一个附加功能。
     
-    ReactDOM.render 是 React 的最基本方法，将模板转为HTML语言，并插入指定的 DOM 节点，使用方法：eactDOM.render（组件， 插入的节点）
+    其他的JSX语句转换器有：
+    jsxTransformer.js --> 对应script type 为 type="text/jsx"；
+    browser.js        --> 对应script type 为 type="text/babel",
+    
+    其中babel的浏览器版本为browser.js
+    
+    ReactDOM.render 是 React 的最基本方法，将模板转为HTML语言，并插入指定的 DOM 节点
+    
+    使用方法：ReactDOM.render（组件， 插入的节点）
     
     ReactDOM.render(
         <h3>welcome</h3>,
@@ -88,8 +97,11 @@
       )
         
       ☆注意：
-      1.在添加事件的时候，需要更改一下this的指向 --> this.show.bind(this),不太明白的是后面的 this.props.a 中 this 指向的组件实例，为什么在方法执行的时候，其中的 this 就变成 undefined 了，需要通过 bind(this) 来修改 this 的指向
-      2.props属性只读，不能修改，执行 this.props.a='good' 会报错（怎么才能修改，并且更新视图，类似ag和vue，在react中使用的是状态）
+      1.在添加事件的时候，需要使用 bind 修改一下 this 的指向 --> this.show.bind(this)
+      
+      疑问：this.props 中 this 指向的组件实例，但是在调用方法的时候，this 就变成 undefined 了，需要通过 bind(this) 来修改 this 的指向？
+      
+      2.props属性只读，执行 this.props.a='good' 会报错（怎么才能修改，并且更新视图，类似ag和vue，其实在react中使用的是状态）
       
     ### 状态（相当于组件类的属性，需要放到构造函数里边）
       class Title extends React.Component {
@@ -110,7 +122,9 @@
         document.querySelector('#wrap')
       )
       
-      更新状态：this.state.msg="new state"，这种方式有问题，虽然状态更新了，但是视图没有跟着更新，要想视图也跟着更新，需要使用react提供的一个方法：this.setState({key: val})
+      更新状态：
+      this.state.msg="new state" 这种方式有问题，虽然状态更新了，但是视图没有跟着更新
+      想要更新视图，需要使用react提供的一个方法 --> this.setState({key: val})
       
      ### 获取元素
       class SyncInput extends React.Component {
