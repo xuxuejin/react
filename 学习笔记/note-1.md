@@ -13,6 +13,7 @@
               <span>span</span>
             </div>
   也可在外边加一个括号
+  
     let div=(<div>
               <div>welcome react</div>
               <span>span</span>
@@ -61,6 +62,7 @@
     )
     
   上面的这种写法，在实际项目开发过程中会越来越乱，react推荐使用面向对象的方法开发，主要有两种：
+  
     1.es5构造函数模拟
     2.es6中class（推荐）
       
@@ -96,16 +98,18 @@
       )
         
   ☆注意：
-  1.在添加事件的时候，（this有问题）需要使用 bind 修改一下 this 的指向 --> this.show.bind(this)
+  
+      1.在添加事件的时候，（this有问题）需要使用 bind 修改一下 this 的指向 --> this.show.bind(this)
 
   疑问：this.props 中 this 指向的组件实例，但是在调用方法的时候，this 就变成 undefined 了？
 
-  2.props属性只读，执行 this.props.a='good' 会报错（怎么才能修改，并且更新视图，类似ag和vue，其实在react中使用的是状态）
+      2.props属性只读，执行 this.props.a='good' 会报错（怎么才能修改，并且更新视图，类似ag和vue，其实在react中使用的是状态）
 
   ☆复习：有哪些改变 this 指向的方法？
-  1.call(this指向谁, arg1, arg2...)     --> 在函数调用阶段改变 this 的指向
-  2.apply(this指向谁, [arg1, arg2...])  --> 在函数调用阶段改变 this 的指向
-  3.bind(this指向谁)                    --> 只是在函数定义阶段改变 this 指向，最终会返回一个函数，需要再次调用（传参）
+  
+      1.call(this指向谁, arg1, arg2...)     --> 在函数调用阶段改变 this 的指向
+      2.apply(this指向谁, [arg1, arg2...])  --> 在函数调用阶段改变 this 的指向
+      3.bind(this指向谁)                    --> 只是在函数定义阶段改变 this 指向，最终会返回一个函数，需要再次调用（传参）
       
 ### 状态（相当于组件类的属性，需要放到构造函数里边）
       class Title extends React.Component {
@@ -127,8 +131,7 @@
       )
       
   更新状态：
-  this.state.msg="new state" 这种方式有问题，虽然状态更新了，但是视图没有跟着更新
-  想要更新视图，需要使用react提供的一个方法 --> this.setState({key: val})
+  this.state.msg="new state" 这种方式有问题，虽然状态更新了，但是视图没有跟着更新，想要更新视图，需要使用react提供的一个方法 --> this.setState({key: val})
       
 ### 获取元素
       class SyncInput extends React.Component {
@@ -163,9 +166,10 @@
       )
       
   获取元素有三种方式：
-  1.ev.target 获取当前事件对象的元素（一般用来获取当前元素）
-  2.获取添加 ref 属性的对象，this.refs 获取的是所有添加 ref 属性的元素（一般用来获取别的元素）
-  3.原生js获取：document.querySelector
+  
+      1.ev.target 获取当前事件对象的元素（一般用来获取当前元素）
+      2.获取添加 ref 属性的对象，this.refs 获取的是所有添加 ref 属性的元素（一般用来获取别的元素）
+      3.原生js获取：document.querySelector
     
   ## 2.基于webpack开发
   
