@@ -1,6 +1,6 @@
 # jsx语法
 学习react需要学习jsx的写法，言而简之就是可以在js里边书写html标签，有几点需要注意的地方：
-  ## 1.书写格式
+  ## 1.单个标签书写格式
     let div=<div>welcome react</div>
     
   ## 2.多个标签,必须有一个根元素（标签）包裹着所有元素（标签）
@@ -18,7 +18,7 @@
               <span>span</span>
             </div>)
   
-  ## 4.单标签必须闭合
+  ## 4.自闭合便签 "/" 不能省略
     错误 -------> <img>
     正确 -------> <img />
   
@@ -35,8 +35,8 @@
     外边的{}是在jsx语法里边写js代码的规范，里边的{}是json语法的规范
     
   ## 8.标签添加事件，事件名遵循驼峰命名法
-  错误 -------> let div=<div onclick={fn}></div>
-  正确 -------> let div=<div onClick={fn}></div>
+    错误 -------> let div=<div onclick={fn}></div>
+    正确 -------> let div=<div onClick={fn}></div>
 
 # react开发模式
   ## 1.直接引入文件
