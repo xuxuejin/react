@@ -35,12 +35,12 @@
     
     外边的{}是在jsx语法里边写js代码的规范，里边的{}是json语法的规范
     
-  ## 8.标签添加事件，事件名遵循驼峰命名法
+## 8.标签添加事件，事件名遵循驼峰命名法
     错误 -------> let div=<div onclick={fn}></div>
     正确 -------> let div=<div onClick={fn}></div>
 
 # react开发模式
-  ## 1.直接引入文件
+## 1.直接引入文件
     react.js      -------> React 的核心库
     react-dom.js  -------> 提供与 DOM 相关的功能
     babel.js      -------> 将 JSX 语法转为 JavaScript 语法
@@ -66,7 +66,7 @@
       1.es5构造函数模拟
       2.es6中class    推荐
       
-    ### 定义组件
+### 定义组件
       页面中引用的react.js提供了一个父类，直接继承就行了
       class Title extends React.Component {
         // 必须有render方法
@@ -81,7 +81,7 @@
         document.querySelector('#app')
       )
       
-  ### 传参
+### 传参
       class Title extends React.Component {
         show() {
           console.log(this.props.a);
