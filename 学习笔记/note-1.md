@@ -45,12 +45,10 @@
     react-dom.js  -------> 提供与 DOM 相关的功能
     babel.js      -------> 将 JSX 语法转为 JavaScript 语法
     
-  Babel主要是用来转换各种ES*代码为浏览器可识别的ES代码，转换JSX看起来倒像是一个附加功能。其他的JSX语句转换器有：
+  Babel主要是用来转换各种ES*代码为浏览器可识别的ES代码，转换JSX看起来倒像是一个附加功能。其他的JSX语句转换器有（babel的浏览器版本为browser.js）：
   
       jsxTransformer.js --> 对应script type 为 type="text/jsx"；
       browser.js        --> 对应script type 为 type="text/babel",
-    
-  其中babel的浏览器版本为browser.js
     
   ReactDOM.render 是 React 的最基本方法，将模板转为HTML语言，并插入指定的 DOM 节点
     
