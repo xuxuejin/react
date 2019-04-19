@@ -45,7 +45,7 @@
     react-dom.js  -------> 提供与 DOM 相关的功能
     babel.js      -------> 将 JSX 语法转为 JavaScript 语法
     
-    Babel主要是用来转换各种ES*代码为浏览器可识别的ES代码。就目前来说，会转换ES6和ES7语句为ES5语句，转换JSX看起来倒像是其的一个附加功能。
+    Babel主要是用来转换各种ES*代码为浏览器可识别的ES代码，转换JSX看起来倒像是一个附加功能。
     
     其他的JSX语句转换器有：
     jsxTransformer.js --> 对应script type 为 type="text/jsx"；
@@ -99,7 +99,7 @@
       ☆注意：
       1.在添加事件的时候，需要使用 bind 修改一下 this 的指向 --> this.show.bind(this)
       
-      疑问：this.props 中 this 指向的组件实例，但是在调用方法的时候，this 就变成 undefined 了，需要通过 bind(this) 来修改 this 的指向？
+      疑问：this.props 中 this 指向的组件实例，但是在调用方法的时候，this 就变成 undefined 了，需要 bind(this) 修改 this 的指向？
       
       2.props属性只读，执行 this.props.a='good' 会报错（怎么才能修改，并且更新视图，类似ag和vue，其实在react中使用的是状态）
       
