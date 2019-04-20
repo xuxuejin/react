@@ -97,13 +97,13 @@
         
   ☆注意：
   
-      1.在添加事件的时候，（this有问题）需要使用 bind 修改一下 this 的指向 --> this.show.bind(this)
+  1.在添加事件的时候，（this有问题）需要使用 bind 修改一下 this 的指向 --> this.show.bind(this)
 
   疑问：this.props 中 this 指向的组件实例，render 函数中的 this 也指向了组件实例，但是在调用方法的时，show 函数中的 this 则为 undefined？
   解答：在JavaScript中，this不是在函数声明的时候定义的，而是在函数调用（即运行）的时候定义的。React组件也遵循这种特性，所以组件方法的“调用者”不同会导致this的不同（“调用者” 指的是函数执行时的当前对象）。如果不用“调用者”显式地调用一个函数，JS 的解释器就会把全局对象当作调用者。但是在严格模式下，没有显式地指定“调用者”，this 不会指向全局对象，而是 undefined。
   当使用 onClick={this.handleClick} 来绑定事件监听函数的时候，handleClick 函数实际上会作为回调函数传入 addEventListener()，但是这个回调没有显式地指定“调用者”，而在 ES6 的 class 语法中，所有在 class 中声明的方法都自动地使用严格模式，因此，React 的组件中添加事件处理函数不改变this指向会得到 undefnied 而不是全局对象或者别的。
   
-      2.props属性只读，执行 this.props.a='good' 会报错（怎么才能修改并更新视图，类似ag和vue，在react中使用的是状态）
+  2.props属性只读，执行 this.props.a='good' 会报错（怎么才能修改并更新视图，类似ag和vue，在react中使用的是状态）
       
   ☆延伸：为什么React没有自动的把bind集成到render方法中呢?
   答:因为render多次调用每次都要bind会影响性能，所以官方建议你自己在constructor中手动bind达到性能优化
@@ -134,7 +134,7 @@
       )
       
   更新状态：
-  this.state.msg="new state" 这种方式有问题，虽然状态更新了，但是视图没有跟着更新，想要更新视图，需要使用react提供的一个方法 --> this.setState({key: val})
+  this.state.msg="" 这种方式状态更新了，但视图没有更新，想要更新视图，需要使用react提供的一个方法： this.setState({key: val})
       
 ### 获取元素
       class SyncInput extends React.Component {
