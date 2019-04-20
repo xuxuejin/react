@@ -99,8 +99,9 @@
   
       1.在添加事件的时候，（this有问题）需要使用 bind 修改一下 this 的指向 --> this.show.bind(this)
 
-  疑问：this.props 中 this 指向的组件实例，但是在调用方法的时候，this 就变成 undefined 了？
-
+  疑问：this.props 中 this 指向的组件实例，render 函数中的 this 也指向了组件实例，但是在调用方法的时，show 函数中的 this 则为 undefined？
+  解答：在JavaScript中，this不是在函数声明的时候定义的，而是在函数调用（即运行）的时候定义的。React组件也遵循这种特性，所以组件方法的“调用者”不同会导致this的不同（“调用者” 指的是函数执行时的当前对象）。
+  
       2.props属性只读，执行 this.props.a='good' 会报错（怎么才能修改，并且更新视图，类似ag和vue，其实在react中使用的是状态）
 
   ☆复习：有哪些改变 this 指向的方法？
