@@ -1,12 +1,15 @@
 # react生命周期
-  1.componentWillMount     ----> 组件挂载前，属性、方法都可以拿到，元素拿不到(做交互)
-  2.componentDidMount      ----> 组件挂载后，属性、方法已经有了，元素也可以拿到（做交互）
-  3.componentWillUpdate    ----> 组件更新前
-  4.componentDidUpdate     ----> 组件挂载后
-  5.componentWillUnmount   ----> 组件卸载（销毁定时器等）
+
+    1.componentWillMount     ----> 组件挂载前，属性、方法都可以拿到，元素拿不到(做交互)
+    2.componentDidMount      ----> 组件挂载后，属性、方法已经有了，元素也可以拿到（做交互）
+    3.componentWillUpdate    ----> 组件更新前
+    4.componentDidUpdate     ----> 组件挂载后
+    5.componentWillUnmount   ----> 组件卸载（销毁定时器等）
   
 # react中的表单
+
   1.受控组件：react控制组件的值和状态，value 由 state 控制，通过 setState 修改 valuevalue
+  
   2.非受控组件：组件的状态改变不受控制，不设置 value 值，通过ref来操作真实的DOM
   
     错误 -----> <input text="text" value="abc" />
@@ -34,7 +37,7 @@
                 </div>)
     }
     
-☆注意：每个元素要添加一个唯一的 key 值，
+☆注意：每个元素要添加一个唯一的 key 值
 
 # react中的交互
   react 本身没有提供交互的库，凡是具有交互能力的库都可以使用:jquery,zepto,axios,fetch,原生ajax...
