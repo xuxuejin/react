@@ -106,6 +106,7 @@
   2.props属性只读，执行 this.props.a='good' 会报错（怎么才能修改并更新视图，类似ag和vue，在react中使用的是状态）
       
   ☆延伸：为什么React没有自动的把bind集成到render方法中呢?
+  
   答:因为render多次调用每次都要bind会影响性能，所以官方建议你自己在constructor中手动bind达到性能优化
 
   ☆复习：有哪些改变 this 指向的方法？
