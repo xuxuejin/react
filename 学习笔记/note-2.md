@@ -1,7 +1,7 @@
 # react生命周期
 1.componentWillMount     ----> 组件挂载前，属性、方法都可以拿到，元素拿不到(做交互)
 
-2.componentDidMount      ----> 组件挂载后，属性、方法已经有了，元素也可以拿到（做交互）
+2.componentDidMount      ----> 组件挂载后，属性、方法已经有了，元素可以拿到（做交互）
 
 3.componentWillUpdate    ----> 组件更新前
 
