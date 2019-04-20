@@ -175,6 +175,7 @@
       3.原生js获取：document.querySelector
     
   ## 2.基于webpack开发
+  详细内容见 note-3
   
   
   
