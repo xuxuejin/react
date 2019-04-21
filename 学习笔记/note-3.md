@@ -151,3 +151,13 @@ webpack 2.x 默认支持模块化，但是非 js 模块并不能处理，需要�
 2.运行时提示 Invalid configuration object
 
 这两个问题都是 webpack-dev-server 版本引起的，换成版本 2.11.5 就解决了。
+
+★补充：react-hot-loader 和 webpack-dev-server有什么不同？
+
+    react-hot-loader    -----> 可以不用刷新页面更改Component的状态
+    webpack-dev-server  -----> 默认需要刷新页面才能够更改Component的状态，但刷新页面状态就会丢失
+
+react-hot-loader 是对 webpack 的热加载进行了改进，支持 react 组件状态不丢失。如果不使用 react-hot-loader，在 input 中输入值，然后再修改代码，发现网页会刷新且输入框的值不在了。
+这边还需要在看看文档配置说明
+
+
