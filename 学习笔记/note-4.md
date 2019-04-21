@@ -3,6 +3,4 @@
 
 ## 1.安装脚手架命令环境
     npm i creat-react-app -g
-验证有没有安装成功：
-  
-  reat-react-app --version
+验证有没有安装成功：reat-react-app --version
