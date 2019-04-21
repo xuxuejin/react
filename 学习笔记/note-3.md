@@ -20,10 +20,7 @@
 ## 3.安装webpack，配置react开发环境
 
 ### 安装webpack
-    npm i webpack webpack-dev-server -g
-    
-    webpack 3.11.0     webpack-dev-server 2.11.5
-    
+    npm i webpack@3.11.0 webpack-dev-server@2.11.5 -g    
 上面安装的是 webpack 的命令环境，之所能直接执行 webpack 命令，是因为全局安装了 webpack。在安装 webpack 和 webpack-dev-server 的时候，一定要注意版本问题，不同的版本不仅配置不一样，用法可能也有所不同。webpack -> 3.11.0 和 webpack-dev-server -> 2.11.5 经过测试没有问题。
 
 ### 配置webpack
