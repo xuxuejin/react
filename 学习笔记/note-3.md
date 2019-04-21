@@ -57,11 +57,11 @@ webpack 2.x 默认支持模块化，但是非 js 模块并不能处理，需要�
 ### 配置babel
 要想使 webpack 支持 jsx 语法，需要安装 babel 来处理，需要安装如下几个模块：
 
-1.babel-core            ----->   babel的核心
+    1.babel-core            ----->   babel的核心
 
-2.babel-loader          ----->   babel模块处理器(注意版本区别，具体查看官网介绍)
+    2.babel-loader          ----->   babel模块处理器(注意版本区别，具体查看官网介绍)
 
-3.babel-preset-es2015   ----->   babel处理 es6 的预设
+    3.babel-preset-es2015   ----->   babel处理 es6 的预设
 
     {
         test: /\.js$/,
@@ -92,15 +92,15 @@ webpack 2.x 默认支持模块化，但是非 js 模块并不能处理，需要�
 ### 配置react
 在配置 react 时，也有一些核心的模块需要安装：
 
-1.react        ----->   react核心
+    1.react        ----->   react核心
 
-2.react-dom    ----->   react处理虚拟DOM的核心
+    2.react-dom    ----->   react处理虚拟DOM的核心
 
 除此 react 本身，还需要安装处理 react 的 loader：
 
-1.babel-preset-react   ----->   处理 react 的预设
+    1.babel-preset-react   ----->   处理 react 的预设
 
-2.react-hot-loader     ----->   热更新组件
+    2.react-hot-loader     ----->   热更新组件
 
 安装完成之后，修改配置文件
 
