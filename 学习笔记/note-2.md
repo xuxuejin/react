@@ -74,7 +74,10 @@
     父级给子级添加一个方法： <Child fnCallBack={this.getMsg} /> 父级里的一个函数
     子级调用父级传递过来的方法： this.props.fnCallBack('传给父级的数据')
   
-  
+#### 补充：mvvm中的vm代表什么
+  m  ----> Model：业务逻辑相关的数据对象
+  v  ----> View：UI表现层，展现出来的用户界面
+  vm ----> ViewModel：它是View与Model的连接器，View与Model通过ViewModel实现双向绑定
   
   
   
