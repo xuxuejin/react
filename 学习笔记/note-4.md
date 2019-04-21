@@ -25,6 +25,7 @@
     npm test
         Starts the test runner.
 
-    npm run eject（将封装在 create-react-app 中的配置全部反编译到当前项目，这样用户就能完全取得 webpack 文件的控制权，更改 webpack 配置，不可逆！）
+    npm run eject
         Removes this tool and copies build dependencies, configuration files
         and scripts into the app directory. If you do this, you can’t go back!
+        （将封装在 create-react-app 中的配置全部反编译到当前项目，用户就能完全取得 webpack 文件的控制权，更改 webpack 配置。）
