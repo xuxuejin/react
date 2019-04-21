@@ -76,7 +76,9 @@
   
 #### 补充：mvvm中的vm代表什么
   m  ----> Model：业务逻辑相关的数据对象
+  
   v  ----> View：UI表现层，展现出来的用户界面
+  
   vm ----> ViewModel：它是View与Model的连接器，View与Model通过ViewModel实现双向绑定
   
   
