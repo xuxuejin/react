@@ -111,9 +111,9 @@
 
   ☆复习：有哪些改变 this 指向的方法？
   
-      1.call(this指向谁, arg1, arg2...)     --> 在函数调用阶段改变 this 的指向
-      2.apply(this指向谁, [arg1, arg2...])  --> 在函数调用阶段改变 this 的指向
-      3.bind(this指向谁)                    --> 只是在函数定义阶段改变 this 指向，最终会返回一个函数，需要再次调用（可传参）
+      1.call(this指向谁, arg1, arg2...)    --> 在函数调用阶段改变 this 的指向
+      2.apply(this指向谁, [arg1, arg2...]) --> 在函数调用阶段改变 this 的指向
+      3.bind(this指向谁)                   --> 只是在函数定义阶段改变 this 指向，最终会返回一个函数，需要再次调用（可传参）
       
 ### 状态（相当于组件类的属性，需要放到构造函数里边）
       class Title extends React.Component {
