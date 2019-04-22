@@ -1,13 +1,19 @@
 # react生命周期
-1.componentWillMount     ----> 组件挂载前，属性、方法都可以拿到，元素拿不到(做交互)
+1.componentWillMount         ----> 组件挂载前，属性、方法都可以拿到，元素拿不到(做交互)
 
-2.componentDidMount      ----> 组件挂载后，属性、方法已经有了，元素可以拿到（做交互）
+2.componentDidMount          ----> 组件挂载后，属性、方法已经有了，元素可以拿到（做交互）
 
-3.componentWillUpdate    ----> 组件更新前
+3.shouldComponentUpdate      ----> 初始化 render 时不会执行，当 props 或 state 发生变化时执行
 
-4.componentDidUpdate     ----> 组件挂载后
+4.componentWillUpdate        ----> 组件更新前
 
-5.componentWillUnmount   ----> 组件卸载（销毁定时器等）
+5.componentDidUpdate         ----> 组件挂载后
+
+6.componentWillReceiveProps  ----> 组件 props 发生变化时执行，初始化render的时候不会执行，一般用于父组件状态更新时子组件的重新渲染。
+
+应用场景：这个钩子函数适合父子组件的互动，比如父组件需要通过某些状态控制子组件渲染或销毁，在 componentWillReceiveProps 回调函数中，可以通过 this.props 来获取 props，而新的 props 是通过该函数的参数传入，那么就可以比较两个 props，从而对本组件的 state 作出更新或者触发子组件内的某些方法。
+
+7.componentWillUnmount       ----> 组件卸载（销毁定时器，停掉网络请求等）
   
 # react中的表单
 
