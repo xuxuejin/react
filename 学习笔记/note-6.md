@@ -28,5 +28,5 @@
     </Router>
 
 #### 3.使用中会遇到的一些问题
-##### 1.本地服务访问没问题，打包之后，刷新或者手动输入路由地址时，提示:Cannot GET /detail
+##### 1.）本地服务访问没问题，打包之后，刷新或者手动输入路由地址时，提示:Cannot GET /detail
 具体解决方案参考的是：https://blog.csdn.net/zwkkkk1/article/details/83411071
