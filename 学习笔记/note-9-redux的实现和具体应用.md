@@ -1,5 +1,6 @@
 ### redux的实现
 ![avatar](https://upload-images.jianshu.io/upload_images/6548744-df461a22f59ef7da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800/format/webp)
+
 redux实现数据的统一管理，有三个概念：
 
 ##### 1.reducer 可以理解为一个数据容器，把数据搜集到 store 里边统一管理  刚开始没有动作的时候，返回的就是初始化的数据
