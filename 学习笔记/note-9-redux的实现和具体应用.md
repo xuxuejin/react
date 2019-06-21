@@ -103,3 +103,6 @@ redux实现数据的统一管理，有三个概念：
 ### 项目应用
 这个参考：https://www.jianshu.com/p/7a71181a7aa0
 
+### 参考
+https://www.jianshu.com/p/e984206553c2
+
